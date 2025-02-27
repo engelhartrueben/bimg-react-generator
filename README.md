@@ -5,11 +5,7 @@
 <br>
 <h1>React Generator</h1>
 
-**Simplify your pixel art**
-
-[Usage](#usage)
-[Credit](#credit)
-[Road Map](#road-map)
+**simplify your pixel art**
 </div>
 
 > [!WARNING]
@@ -17,7 +13,7 @@
 >
 > IF YOU REFRESH THE PAGE, YOUR IMAGE WILL BE FORGOTTON TO THE ETHER. There is a fix coming, but the road map is large and journey strenuous.
 
-bImg is a simple 2-bit image format. This application allows for the creation of `.bimg` pictures.  
+`bImg` is a simple 2-bit image format. This application allows for the creation of `.bimg` pictures... at some point... 
 
 ## Usage
 - `yarn run dev` - start development server
