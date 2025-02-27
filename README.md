@@ -9,11 +9,11 @@
 </div>
 
 > [!WARNING]
-> This project is not complete. Currently, it is only capable of creating simple 2-bit pixel images in the browser. The save function is not yet complete.
+> This project is not complete. Currently, it is only capable of creating simple 1-bit pixel images in the browser. The save function is not yet complete.
 >
 > IF YOU REFRESH THE PAGE, YOUR IMAGE WILL BE FORGOTTON TO THE ETHER. There is a fix coming, but the road map is large and journey strenuous.
 
-`bImg` is a simple 2-bit image format. This application allows for the creation of `.bimg` pictures... at some point... 
+`bImg` is a simple 1-bit image format. This application allows for the creation of `.bimg` pictures... at some point... 
 
 ## Usage
 - `yarn run dev` - start development server
