@@ -1,5 +1,6 @@
 <div align="center">
-    <h1>.bimg React Generator</h1>
+    <img src"/assets/bimg.png" alt="bimg logo" />	
+    <h1>React Generator</h1>
 
 <br>
 
