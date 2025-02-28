@@ -20,7 +20,7 @@ const App = () => {
   //    If the user changes the size of the window, the event
   //    listener can trigger 3 to 4 times. I want to warn the user
   //    not piss them off.
-  const [warningLatch, setWarningLatch] = useState(false);
+  // const [warningLatch, setWarningLatch] = useState(false);
 
   // TODO what happens if dividing by 8 gives decimal?
   const [totalBytes, setTotalBytes] = useState<number>(
@@ -58,21 +58,26 @@ const App = () => {
     return URL.createObjectURL(f);
   }
 
-  const handleResize = () => setWarningLatch(true);
+  /**
+   * Archaic. Was hoping to tell the user that resizing the window was not a 
+   * good idea. This was when I was using a million <div>'s rather than canvas.
+   * Keeping just in case, will probably get rid of this. 
+   */
+  // const handleResize = () => setWarningLatch(true);
 
-  useEffect(() => {
-    window.addEventListener("resize", () => handleResize, true);
-  })
+  // useEffect(() => {
+  //   window.addEventListener("resize", () => handleResize, true);
+  // })
 
-  useEffect(()=> {
-    alert(
-      `
-      Resizing the window is a bad idea.\n
-      It costs too much to re-render each pixel, literally.
-      Refresh and don't move the window again. Got it?
-      `
-    );
-  }, [warningLatch])
+  // useEffect(()=> {
+  //   alert(
+  //     `
+  //     Resizing the window is a bad idea.\n
+  //     It costs too much to re-render each pixel, literally.
+  //     Refresh and don't move the window again. Got it?
+  //     `
+  //   );
+  // }, [warningLatch])
 
   // Pass info from child to parent
   const cSetHeight = (h: number) => setHeight(h);
@@ -87,7 +92,7 @@ const App = () => {
   return (
     <MantineProvider theme={theme} defaultColorScheme='light'>
       <div style={styles.root}>
-        <div>
+        <div id="image-box">
           <ImageBox 
             styles={styles}
             width={width}
@@ -108,4 +113,4 @@ const App = () => {
   )
 }
 
-export default App
+export default App;

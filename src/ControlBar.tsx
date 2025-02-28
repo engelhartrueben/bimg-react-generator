@@ -24,9 +24,11 @@ const ControlBar = (props : Props) => {
 
     const {
         main,
+        title,
         form,
         inputs,
-        submit
+        submit,
+        download
     } = props.styles.controlBar
 
     const getDownloadURL = () => setUrl(renderBlobAndGetURL());
@@ -43,7 +45,7 @@ const ControlBar = (props : Props) => {
     return (
         <>
         <div style={main}>
-            <p>Control Bar</p> 
+            <p style={title}>Control Bar</p> 
             <form onSubmit={handleSubmit} style={form}>
                 <div style={inputs}>
                     <label htmlFor="height">Height </label>
@@ -56,7 +58,6 @@ const ControlBar = (props : Props) => {
                         defaultValue={props.height}
                         step="2"
                         pattern="\d*"
-
                     />
                 </div>
                 <div>
@@ -76,19 +77,21 @@ const ControlBar = (props : Props) => {
                     Change dimensions
                 </button>
             </form>
-            <div id="file_size_estimate">
-                <p>
-                    Current Size: {props.file_size_est} bytes
+            <div style={download}>
+                <div id="file_size_estimate">
+                    <p>
+                        Current Size: {props.file_size_est} bytes
+                    </p>
+                </div>
+                <button onClick={getDownloadURL}>
+                    Get Download
+                </button>
+                <p id="download">
+                    <a href={url}>
+                        {url ? "Link" : ""}
+                    </a>
                 </p>
             </div>
-            <button onClick={getDownloadURL}>
-                Get Download
-            </button>
-            <p id="download">
-                <a href={url}>
-                    {url ? "Link" : ""}
-                </a>
-            </p>
         </div>
         </>
     );
