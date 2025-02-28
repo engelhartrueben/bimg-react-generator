@@ -1,7 +1,12 @@
+import '@mantine/core/styles.css';
+
+import { MantineProvider } from '@mantine/core';
+
 import { useState, useEffect } from 'react';
 
 import ImageBox from "./ImageBox";
 import ControlBar from './ControlBar';
+import theme from "./theme.tsx";
 
 import styles from "./styles";
 // import './App.css'
@@ -80,26 +85,26 @@ const App = () => {
   }
 
   return (
-    <>
-    <div style={styles.root}>
-      <div>
-        <ImageBox 
-          styles={styles}
-          width={width}
-          height={height}
-        />
+    <MantineProvider theme={theme} defaultColorScheme='light'>
+      <div style={styles.root}>
+        <div>
+          <ImageBox 
+            styles={styles}
+            width={width}
+            height={height}
+          />
+        </div>
+        <div>
+          <ControlBar 
+            width={width} 
+            height={height} 
+            funcs={funcs} 
+            file_size_est={totalBytes}
+            styles={styles}
+          />
+        </div>
       </div>
-      <div>
-        <ControlBar 
-          width={width} 
-          height={height} 
-          funcs={funcs} 
-          file_size_est={totalBytes}
-          styles={styles}
-        />
-      </div>
-    </div>
-    </>
+    </MantineProvider>
   )
 }
 
