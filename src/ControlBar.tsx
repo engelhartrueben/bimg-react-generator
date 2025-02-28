@@ -24,6 +24,7 @@ const ControlBar = (props : Props) => {
 
     const {
         main,
+        title,
         form,
         inputs,
         submit
@@ -43,7 +44,7 @@ const ControlBar = (props : Props) => {
     return (
         <>
         <div style={main}>
-            <p>Control Bar</p> 
+            <p style={title}>Control Bar</p> 
             <form onSubmit={handleSubmit} style={form}>
                 <div style={inputs}>
                     <label htmlFor="height">Height </label>
@@ -56,7 +57,6 @@ const ControlBar = (props : Props) => {
                         defaultValue={props.height}
                         step="2"
                         pattern="\d*"
-
                     />
                 </div>
                 <div>
