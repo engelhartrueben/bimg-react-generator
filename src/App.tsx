@@ -92,7 +92,7 @@ const App = () => {
   return (
     <MantineProvider theme={theme} defaultColorScheme='light'>
       <div style={styles.root}>
-        <div>
+        <div id="image-box">
           <ImageBox 
             styles={styles}
             width={width}

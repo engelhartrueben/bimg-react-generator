@@ -34,13 +34,16 @@ const styles: any = Object.freeze({
             display: "flex",
             flexDirection: "column",
             justifyContent: "right",
-            backgroundColor: "grey"
+            backgroundColor: "white",
         },
         inputs: {
             padding: "5px"
         },
         submit: {
             margin: "5px"
+        },
+        download: {
+            // TODO: put download button on the bottom
         },
     },
     imageBox: {
